@@ -1,0 +1,32 @@
+package.aws4embeddedlinux-buildbot = {
+    interfaces = (1.0);
+
+    deploy = {
+        generic = true;
+    };
+
+    build-environment = {
+        chroot = basic;
+        network-access = blocked;
+    };
+
+    build-system = cdk-build;
+    build-tools = {
+        1.0 = {
+            CDKBuild = 4.x;
+            NodeJS = 14.x;
+            NpmPrettyMuch = 1.0;
+        };
+    };
+
+    dependencies = {
+        1.0 = {
+        };
+    };
+
+    runtime-dependencies = {
+        1.0 = {
+            NodeJS = 14.x;
+        };
+    };
+};

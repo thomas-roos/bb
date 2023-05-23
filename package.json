@@ -1,0 +1,31 @@
+{
+  "name": "aws4embeddedlinux-buildbot",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/lib/app.js",
+  "types": "dist/types/app.d.ts",
+  "scripts": {
+      "zip-config": "if [ -f build/admin-config/config.zip ]; then rm -rf build/admin-config; fi && mkdir build/admin-config ; cd config/admin/ && zip -q -o ../../build/admin-config/config.zip -r *",
+      "clean": "rm -rf ./js/ && rm -rf dist && rm -rf cdk.out && rm -rf build/admin-config",
+      "build": "tsc",
+      "watch": "tsc -w",
+      "prepare": "npm run zip-config && npm run-script build",
+      "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+      "pretest": "eslint '*/**/*.{js,ts,tsx}'",
+      "test": "echo OK"
+  },
+  "devDependencies": {
+      "@types/node": "^20.2.3",
+      "@typescript-eslint/eslint-plugin": "^5.59.7",
+      "@typescript-eslint/parser": "^5.59.7",
+      "@typescript-eslint/typescript-estree": "^5.59.7",
+      "aws-cdk": "^2.80.0",
+      "aws-cdk-lib": "^2.80.0",
+      "constructs": "^10.2.31",
+      "eslint": "^8.41.0",
+      "eslint-config-prettier": "^8.8.0",
+      "eslint-plugin-prettier": "^4.2.1",
+      "prettier": "^2.8.8",
+      "typescript": "^5.0.4"
+  }
+}
