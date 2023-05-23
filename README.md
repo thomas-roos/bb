@@ -51,4 +51,4 @@ opening an issue on GitHub.
 
 ## License
 
-Licensed under [MIT License](LICENSE).
+Licensed under [MIT License](LICENSE.md).
