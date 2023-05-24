@@ -12,7 +12,9 @@
       "prepare": "npm run zip-config && npm run-script build",
       "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
       "pretest": "eslint '*/**/*.{js,ts,tsx}'",
-      "test": "echo OK"
+      "test": "echo OK",
+      "format": "eslint '**/*.{js,ts,json}' --quiet --fix",
+      "check": "eslint '**/*.{js,ts,json}'"
   },
   "devDependencies": {
       "@types/node": "^20.2.3",
