@@ -5,7 +5,7 @@
   "main": "dist/lib/app.js",
   "types": "dist/types/app.d.ts",
   "scripts": {
-      "zip-config": "if [ -f dist/admin-configuration/config.zip ]; then rm -rf dist/admin-config; fi && mkdir -p dist/admin-config ; cd configuration/admin/ && zip -q -o ../../dist/admin-configuration/config.zip -r *",
+      "zip-config": "if [ -f dist/admin-config/config.zip ]; then rm -rf dist/admin-config; fi && mkdir -p dist/admin-config ; cd configuration/admin/ && zip -q -o ../../dist/admin-config/config.zip -r *",
       "clean": "rm -rf ./js/ && rm -rf dist && rm -rf cdk.out && rm -rf dist/admin-config",
       "build": "tsc",
       "watch": "tsc -w",

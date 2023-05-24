@@ -28,6 +28,7 @@ npm install
 To install the necessary dependencies, and then:
 
 ```bash
+npm run build
 cdk deploy
 ```
 
