@@ -11,10 +11,6 @@ jobs:
   Run-CDK-Tests:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: demos-pipeline
-
     strategy:
       matrix:
         node-version: [16.x, 18.x, 20.x]
