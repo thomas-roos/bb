@@ -6,5 +6,5 @@
       "version": 1
     }
   },
-  "output": "build/cdk.out"
+  "output": "dist/cdk.out"
 }

@@ -27,7 +27,7 @@ COPY admin.cfg .
 COPY envfile .
 COPY entry.sh .
 RUN mkdir userconfig
-RUN chown -R user: userconfig/
-COPY user.cfg userconfig/
+RUN chown -R user: userconfiguration/
+COPY user.cfg userconfiguration/
 
 ENTRYPOINT [ "./entry.sh" ]

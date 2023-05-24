@@ -91,7 +91,7 @@ if (dev) {
         env,
         terminationProtection,
         bucket: buildBotConfig.bucket,
-        bucketKey: 'admin-config/config.zip',
+        bucketKey: 'admin-configuration/config.zip',
         service: buildBotServer.service,
         repo: buildBotImageRepo.repo,
         configrepo: buildBotConfig.configrepo,

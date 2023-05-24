@@ -1,12 +1,12 @@
 {
   "name": "aws4embeddedlinux-buildbot",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/lib/app.js",
   "types": "dist/types/app.d.ts",
   "scripts": {
-      "zip-config": "if [ -f build/admin-config/config.zip ]; then rm -rf build/admin-config; fi && mkdir build/admin-config ; cd config/admin/ && zip -q -o ../../build/admin-config/config.zip -r *",
-      "clean": "rm -rf ./js/ && rm -rf dist && rm -rf cdk.out && rm -rf build/admin-config",
+      "zip-config": "if [ -f dist/admin-configuration/config.zip ]; then rm -rf dist/admin-config; fi && mkdir -p dist/admin-config ; cd configuration/admin/ && zip -q -o ../../dist/admin-configuration/config.zip -r *",
+      "clean": "rm -rf ./js/ && rm -rf dist && rm -rf cdk.out && rm -rf dist/admin-config",
       "build": "tsc",
       "watch": "tsc -w",
       "prepare": "npm run zip-config && npm run-script build",

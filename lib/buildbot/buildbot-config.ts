@@ -49,7 +49,7 @@ export class BuildBotConfig extends cdk.Stack {
     }
 
     new BucketDeployment(this, "Deployment", {
-      sources: [Source.asset("build/admin-config")],
+      sources: [Source.asset("dist/admin-config")],
       destinationBucket: configBucket.bucket,
       destinationKeyPrefix: "admin-config",
       role: bucketDeploymentRole,
@@ -60,7 +60,7 @@ export class BuildBotConfig extends cdk.Stack {
 
     const repository = new Repository(this, "Repository", {
       repositoryName: "buildbot-user-repo",
-      code: Code.fromDirectory("config/user-repo", "main"),
+      code: Code.fromDirectory("configuration/user-repo", "main"),
     });
 
     this.configrepo = repository;
