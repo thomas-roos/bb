@@ -1,3 +1,3 @@
-export * from "./vpc";
-export * from "./cluster";
-export * from "./servicediscovery";
+export * from './vpc';
+export * from './cluster';
+export * from './servicediscovery';

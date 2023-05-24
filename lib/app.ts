@@ -16,10 +16,10 @@ if (dev) {
 
     const stageProps = DeveloperStages[devName];
 
-    const env = { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION }
+    const env = { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION };
 
     const terminationProtection = true;
-        /// App stacks
+    /// App stacks
 
     const vpc = new Vpc(app, 'Vpc', {
         env,
