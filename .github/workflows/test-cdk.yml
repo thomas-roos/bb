@@ -1,13 +1,14 @@
 name: Test CDK 
 on:
+  workflow_dispatch:
   push:
     branches: ["**"]
-    paths: ["demos-pipeline/**"]
+    paths: ["lib/**"]
   pull_request:
     branches: [master]
-    paths: ["demos-pipeline/**"]
+    paths: ["lib/**"]
 jobs:
-  Run-Demos-Pipeline-Tests:
+  Run-CDK-Tests:
     runs-on: ubuntu-latest
 
     defaults:
